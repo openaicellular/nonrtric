@@ -23,9 +23,8 @@
 #
 ###
 #Helm package
-USER=$(whoami)
 
-cp /home/$USER/main-file-repo/helm-v3.5.4-linux-amd64.tar.gz /tmp/
+cp /home/$SUDO_USER/main-file-repo/helm-v3.5.4-linux-amd64.tar.gz /tmp/
 cd /tmp
 tar xvfz /tmp/helm-v3.5.4-linux-amd64.tar.gz
 sudo mv linux-amd64/helm /usr/local/bin/helm

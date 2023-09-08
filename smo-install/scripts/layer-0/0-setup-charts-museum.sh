@@ -27,9 +27,7 @@ SCRIPT=$(readlink -f "$0")
 SCRIPT_PATH=$(dirname "$SCRIPT")
 cd $SCRIPT_PATH
 
-USER=$(whoami)
-
-cp /home/$USER/main-file-repo/chartmuseum-v0.13.1-linux-amd64.tar.gz /tmp/
+cp /home/$SUDO_USER/main-file-repo/chartmuseum-v0.13.1-linux-amd64.tar.gz /tmp/
 cd /tmp
 tar xvfz chartmuseum-v0.13.1-linux-amd64.tar.gz
 sudo mv /tmp/linux-amd64/chartmuseum /usr/local/bin/chartmuseum
